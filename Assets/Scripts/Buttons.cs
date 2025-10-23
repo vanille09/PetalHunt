@@ -8,6 +8,7 @@ public class Buttons : MonoBehaviour
 {
 
     public GameObject CreditsPanel;
+    public GameObject SettingsPanel;
 
     public void PlayGame()
     {
@@ -32,6 +33,16 @@ public class Buttons : MonoBehaviour
     public void CreditsOff()
     {
         CreditsPanel.SetActive(false);
+    }
+
+    public void SettingsOn()
+    {
+        SettingsPanel.SetActive(true);
+    }
+
+    public void SettingsOff()
+    {
+        SettingsPanel.SetActive(false);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
