@@ -65,8 +65,8 @@ public class Buttons : MonoBehaviour
 
     public void BackToPausePanel()
     {
-    SettingsPanel.SetActive(false);
-    PausePanel.SetActive(true);
+        SettingsPanel.SetActive(false);
+        PausePanel.SetActive(true);
     }
 
     public void SettingsOn1()
