@@ -10,13 +10,17 @@ public class Buttons : MonoBehaviour
     public GameObject CreditsPanel;
     public GameObject PausePanel;
     public GameObject SettingsPanel;
+    public GameObject SettingsPanel1;
+    public GameObject InstructionsPanel;
+    
+
 
     public bool isPaused = false;
 
     public void PlayGame() 
     {
         SceneManager.LoadScene(1);
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
     }
 
     public void GoMenu()
@@ -59,16 +63,41 @@ public class Buttons : MonoBehaviour
         SettingsPanel.SetActive(true);
     }
 
+    public void BackToPausePanel()
+    {
+    SettingsPanel.SetActive(false);
+    PausePanel.SetActive(true);
+    }
+
+    public void SettingsOn1()
+    {
+        SettingsPanel.SetActive(true);
+        PausePanel.SetActive(false);
+
+    }
+    public void SettingsOff1()
+    {
+        SettingsPanel.SetActive(false);
+    }
+
     public void SettingsOff()
     {
         SettingsPanel.SetActive(false);
     }
 
+    public void InstructionsOff()
+    {
+        InstructionsPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
